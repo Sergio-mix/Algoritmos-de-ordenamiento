@@ -7,6 +7,7 @@ def burbuja(lista):
                 temp = lista[i]
                 lista[i] = lista[i + 1]
                 lista[i + 1] = temp
+    return lista
 
 
 # Algoritmo de ordenamiento por seleccion
@@ -16,6 +17,7 @@ def seleccion(lista):
         for j in range(i + 1, size):
             if lista[i] > lista[j]:
                 lista[i], lista[j] = lista[j], lista[i]
+    return lista
 
 
 # Algoritmo de ordenamiento QuickSort
@@ -23,7 +25,8 @@ def sort(lista):
     izquierda = []
     centro = []
     derecha = []
-    if len(lista) > 1:
+    size = len(lista)
+    if size > 1:
         pivote = lista[0]
         for i in lista:
             if i < pivote:
