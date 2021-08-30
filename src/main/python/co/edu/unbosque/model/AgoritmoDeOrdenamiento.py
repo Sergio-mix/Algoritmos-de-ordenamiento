@@ -20,8 +20,33 @@ def seleccion(lista):
     return lista
 
 
+# Algoritmo de ordenamiento Radix
+def radixSort(lista):
+    RADIX = 10
+    maxLength = False
+    tmp, placement = -1, 1
+
+    while not maxLength:
+        maxLength = True
+        buckets = [list() for _ in range(RADIX)]
+        for i in lista:
+            tmp = i // placement
+            buckets[tmp % RADIX].append(i)
+            if maxLength and tmp > 0:
+                maxLength = False
+
+        a = 0
+        for b in range(RADIX):
+            buck = buckets[b]
+            for i in buck:
+                lista[a] = i
+                a += 1
+        placement *= RADIX
+    return lista
+
+
 # Algoritmo de ordenamiento QuickSort
-def sort(lista):
+def quickSort(lista):
     izquierda = []
     centro = []
     derecha = []
@@ -35,6 +60,36 @@ def sort(lista):
                 centro.append(i)
             elif i > pivote:
                 derecha.append(i)
-        return sort(izquierda) + centro + sort(derecha)
+        return quickSort(izquierda) + centro + quickSort(derecha)
     else:
         return lista
+
+
+# Algoritmo de ordenamiento MergeSort
+def mergeSort(lista):
+    if len(lista) > 1:
+        mid = len(lista) // 2
+        left = lista[:mid]
+        right = lista[mid:]
+        mergeSort(left)
+        mergeSort(right)
+        i = 0
+        j = 0
+        k = 0
+        while i < len(left) and j < len(right):
+            if left[i] <= right[j]:
+                lista[k] = left[i]
+                i += 1
+            else:
+                lista[k] = right[j]
+                j += 1
+            k += 1
+        while i < len(left):
+            lista[k] = left[i]
+            i += 1
+            k += 1
+        while j < len(right):
+            lista[k] = right[j]
+            j += 1
+            k += 1
+    return lista
