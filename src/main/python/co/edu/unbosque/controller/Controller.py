@@ -24,8 +24,13 @@ def listaOrdenada(n):
     return lista
 
 
-def listaInvertida(lista):
-    lista.reverse()
+def listaInvertida(n):
+    x = n
+    i = 1
+    lista = []
+    while x >= i:
+        lista.append(x)
+        x -= 1
     return lista
 
 

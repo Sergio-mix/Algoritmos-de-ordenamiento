@@ -35,7 +35,7 @@ menu = """Ingrese el tamaño del vector
 opcion = int(input(menu))
 
 listaOrdenada = listaOrdenada(opcion)
-listaInvertida = listaInvertida(listaOrdenada)
+listaInvertida = listaInvertida(opcion)
 
 print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 array = crearArray(opcion)
