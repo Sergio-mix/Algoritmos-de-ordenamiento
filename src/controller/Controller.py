@@ -1,6 +1,7 @@
 import random
 import time
-from src.main.python.co.edu.unbosque.model.AgoritmoDeOrdenamiento import AgoritmoDeOrdenamiento
+
+from src.model.AgoritmoDeOrdenamiento import AgoritmoDeOrdenamiento
 
 
 class Controller:

@@ -1,4 +1,4 @@
-from src.main.python.co.edu.unbosque.controller.Controller import Controller
+from src.controller.Controller import Controller
 
 
 class View:
