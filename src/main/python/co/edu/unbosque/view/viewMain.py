@@ -1,6 +1,5 @@
-from src.main.python.co.edu.unbosque.controller.Controller import numerosAleatorios, tiempoDeEjecucion
-from src.main.python.co.edu.unbosque.model.AgoritmoDeOrdenamiento import mergeSort, burbuja, seleccion, radixSort, \
-    quickSort
+from src.main.python.co.edu.unbosque.controller.Controller import numerosAleatorios, burbujaTime, seleccionTime, \
+    radixSortTime, quickSortTime, mergeSortTime
 
 
 def crearArray(n):
@@ -9,7 +8,7 @@ def crearArray(n):
     menu = """Elija como desea ingresar los valores del arreglo
     [1] Manual
     [2] Aleatoria
-    >Opcion: """
+    > Opcion: """
 
     opcion = int(input(menu))
 
@@ -28,19 +27,24 @@ def crearArray(n):
 
     return lista
 
-
-def algoritmos(lista):
-    print("(Algoritmo burbuja)", tiempoDeEjecucion(burbuja(lista)))
-    print("(Algoritmo seleccion)", tiempoDeEjecucion(seleccion(lista)))
-    print("(Algoritmo radixSort)", tiempoDeEjecucion(radixSort(lista)))
-    print("(Algoritmo quickSort)", tiempoDeEjecucion(quickSort(lista)))
-    print("(Algoritmo mergeSort)", tiempoDeEjecucion(mergeSort(lista)))
-
+print("⋆﹥━━━━━━━━━━━━━━━━━━━━━﹤⋆ MENU ⋆﹥━━━━━━━━━━━━━━━━━━━━━﹤⋆")
 
 menu = """Ingrese el tamaño del vector
     > Cantidad de Numeros: """
-
 opcion = int(input(menu))
 
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
 array = crearArray(opcion)
-algoritmos(array)
+print(""" """)
+print("Ordenando lista...")
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+burbujaTime(array)
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+seleccionTime(array)
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+radixSortTime(array)
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+quickSortTime(array)
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+mergeSortTime(array)
+print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
