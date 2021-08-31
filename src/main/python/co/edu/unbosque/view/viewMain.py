@@ -24,7 +24,7 @@ def crearArray(n):
             lista.append(valor)
             x += 1
     elif opcion == 2:
-        lista = numerosAleatorios(n, 0, 30)
+        lista = numerosAleatorios(n, 0, 9)
 
     return lista
 
