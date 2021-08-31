@@ -17,4 +17,4 @@ def tiempoDeEjecucion(function):
     inicio = time.perf_counter()
     function
     final = time.perf_counter()
-    print("El tiempo de ejecución fue de:", "{:.10}".format((final - inicio) * 1000), "ms")
+    return "El tiempo de ejecución fue de:", "{:.3}".format((final - inicio) * 1000), "ms"

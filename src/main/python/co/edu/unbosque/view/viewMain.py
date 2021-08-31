@@ -30,40 +30,17 @@ def crearArray(n):
 
 
 def algoritmos(lista):
-    print(tiempoDeEjecucion(burbuja(lista)))
-    print(tiempoDeEjecucion(seleccion(lista)))
-    print(tiempoDeEjecucion(radixSort(lista)))
-    print(tiempoDeEjecucion(quickSort(lista)))
-    print(tiempoDeEjecucion(mergeSort(lista)))
+    print("(Algoritmo burbuja)", tiempoDeEjecucion(burbuja(lista)))
+    print("(Algoritmo seleccion)", tiempoDeEjecucion(seleccion(lista)))
+    print("(Algoritmo radixSort)", tiempoDeEjecucion(radixSort(lista)))
+    print("(Algoritmo quickSort)", tiempoDeEjecucion(quickSort(lista)))
+    print("(Algoritmo mergeSort)", tiempoDeEjecucion(mergeSort(lista)))
 
 
 menu = """Ingrese el tamaño del vector
-    [1] 4000
-    [2] 40000
-    [3] 400000
-    [4] 4000000
-    [5] 40000000
-    > Opcion: """
+    > Cantidad de Numeros: """
 
 opcion = int(input(menu))
 
-while not ((opcion > 0) and (opcion <= 5)):
-    print("<< Ingrese una opcion valida >>")
-
-    opcion = int(input(menu))
-
-if opcion == 1:
-    array = crearArray(4000)
-    algoritmos(array)
-elif opcion == 2:
-    array = crearArray(40000)
-    algoritmos(array)
-elif opcion == 3:
-    array = crearArray(400000)
-    algoritmos(array)
-elif opcion == 4:
-    array = crearArray(4000000)
-    algoritmos(array)
-elif opcion == 5:
-    array = crearArray(40000000)
-    algoritmos(array)
+array = crearArray(opcion)
+algoritmos(array)
