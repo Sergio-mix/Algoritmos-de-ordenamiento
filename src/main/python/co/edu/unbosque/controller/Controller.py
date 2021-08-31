@@ -15,9 +15,22 @@ def numerosAleatorios(n, minimo, maximo):
     return lista
 
 
+def listaOrdenada(n):
+    x = 1
+    lista = []
+    while x <= n:
+        lista.append(x)
+        x += 1
+    return lista
+
+
+def listaInvertida(lista):
+    lista.reverse()
+    return lista
+
+
 # Método para calcular el tiempo de ejecución del algoritmo burbuja
 def burbujaTime(lista):
-    print("Algoritmo burbuja")
     inicio = time.time()
     burbuja(lista)
     fin = time.time()
@@ -26,7 +39,6 @@ def burbujaTime(lista):
 
 # Método para calcular el tiempo de ejecución del algoritmo seleccion
 def seleccionTime(lista):
-    print("Algoritmo seleccion")
     inicio = time.time()
     seleccion(lista)
     fin = time.time()
@@ -35,7 +47,6 @@ def seleccionTime(lista):
 
 # Método para calcular el tiempo de ejecución del algoritmo radixSort
 def radixSortTime(lista):
-    print("Algoritmo radixSort")
     inicio = time.time()
     radixSort(lista)
     fin = time.time()
@@ -44,7 +55,6 @@ def radixSortTime(lista):
 
 # Método para calcular el tiempo de ejecución del algoritmo quickSort
 def quickSortTime(lista):
-    print("Algoritmo quickSort")
     inicio = time.time()
     quickSort(lista)
     fin = time.time()
@@ -53,7 +63,6 @@ def quickSortTime(lista):
 
 # Método para calcular el tiempo de ejecución del algoritmo mergeSort
 def mergeSortTime(lista):
-    print("Algoritmo mergeSort")
     inicio = time.time()
     mergeSort(lista)
     fin = time.time()

@@ -1,7 +1,7 @@
 # Algoritmo de ordenamiento burbuja
 def burbuja(lista):
-    tamaño = len(lista)
-    for numPasada in range(tamaño - 1, 0, -1):
+    tamanio = len(lista)
+    for numPasada in range(tamanio - 1, 0, -1):
         for i in range(numPasada):
             if lista[i] > lista[i + 1]:
                 temp = lista[i]
@@ -12,9 +12,9 @@ def burbuja(lista):
 
 # Algoritmo de ordenamiento por seleccion
 def seleccion(lista):
-    tamaño = len(lista)
-    for i in range(tamaño - 1):
-        for j in range(i + 1, tamaño):
+    tamanio = len(lista)
+    for i in range(tamanio - 1):
+        for j in range(i + 1, tamanio):
             if lista[i] > lista[j]:
                 lista[i], lista[j] = lista[j], lista[i]
     return lista
@@ -47,22 +47,16 @@ def radixSort(lista):
 
 # Algoritmo de ordenamiento QuickSort
 def quickSort(lista):
-    izquierda = []
-    centro = []
-    derecha = []
-    tamaño = len(lista)
-    if tamaño > 1:
-        pivote = lista[0]
-        for i in lista:
-            if i < pivote:
-                izquierda.append(i)
-            elif i == pivote:
-                centro.append(i)
-            elif i > pivote:
-                derecha.append(i)
-        return quickSort(izquierda) + centro + quickSort(derecha)
-    else:
+    if (len(lista) <= 1):
         return lista
+
+    pivot = lista[len(lista) // 2]
+
+    lt = [i for i in lista if i < pivot]
+    eq = [pivot] * lista.count(pivot)
+    gt = [i for i in lista if i > pivot]
+    lista = quickSort(lt) + eq + quickSort(gt)
+    return lista
 
 
 # Algoritmo de ordenamiento MergeSort
