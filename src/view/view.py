@@ -1,4 +1,4 @@
-from src.controller.Controller import Controller
+from src.controller.controller import Controller
 
 
 class View:

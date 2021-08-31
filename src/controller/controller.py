@@ -1,7 +1,7 @@
 import random
 import time
 
-from src.model.AgoritmoDeOrdenamiento import AgoritmoDeOrdenamiento
+from src.model.agoritmoDeOrdenamiento import AgoritmoDeOrdenamiento
 
 
 class Controller:

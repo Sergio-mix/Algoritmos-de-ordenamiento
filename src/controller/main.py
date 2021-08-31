@@ -1,4 +1,4 @@
-from src.view.View import View
+from src.view.view import View
 
 if __name__ == "__main__":
     View().menu()
