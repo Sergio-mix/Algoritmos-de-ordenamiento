@@ -1,9 +1,16 @@
 from src.main.python.co.edu.unbosque.controller.Controller import Controller
 
-
+"""
+Clase View, contiene toda la parte visualizable
+ por consola del programa
+"""
 class View:
-
+    """Crea un array segun las opciones del usuario"""
     def crearArray(self, n):
+        """
+        :param n variable a recibir:
+        :return : el array
+        """
         lista = []
 
         menu = """Elija como desea ingresar los valores del arreglo
@@ -27,8 +34,11 @@ class View:
             lista = Controller().numerosAleatorios(n, 0, n)
 
         return lista
-
+    """Metodo menu que abre el contenido del programa """
     def menu(self):
+        """
+        Contenido del programa
+        """
         global listaOrdenada, listaInvertida
         print("⋆﹥━━━━━━━━━━━━━━━━━━━━━﹤⋆ MENU ⋆﹥━━━━━━━━━━━━━━━━━━━━━﹤⋆")
 

@@ -1,8 +1,16 @@
 class AgoritmoDeOrdenamiento:
-    # Algoritmo de ordenamiento burbuja
+    """
+    Algoritmo de ordenamiento burbuja,
+    """
     def burbuja(self, lista):
+        """
+        :param lista: lista introducida
+        :return: lista ordenada
+        """
         tamanio = len(lista)
+        """ Un ciclo que pasa por el tamaño de la lista"""
         for numPasada in range(tamanio - 1, 0, -1):
+            """ Ciclo que verifica y ordena"""
             for i in range(numPasada):
                 if lista[i] > lista[i + 1]:
                     temp = lista[i]
@@ -10,8 +18,12 @@ class AgoritmoDeOrdenamiento:
                     lista[i + 1] = temp
         return lista
 
-    # Algoritmo de ordenamiento por seleccion
+    """Algoritmo de ordenamiento por seleccion"""
     def seleccion(self, lista):
+        """
+        :param lista: lista introducida
+        :return: lista ordenada
+        """
         tamanio = len(lista)
         for i in range(tamanio - 1):
             for j in range(i + 1, tamanio):
@@ -19,8 +31,12 @@ class AgoritmoDeOrdenamiento:
                     lista[i], lista[j] = lista[j], lista[i]
         return lista
 
-    # Algoritmo de ordenamiento Radix
+    """Algoritmo de ordenamiento Radix"""
     def radixSort(self, lista):
+        """
+        :param lista: lista introducida
+        :return: lista ordenada
+        """
         RADIX = 10
         maxLength = False
         tmp, placement = -1, 1
@@ -43,8 +59,12 @@ class AgoritmoDeOrdenamiento:
             placement *= RADIX
         return lista
 
-    # Algoritmo de ordenamiento QuickSort
+    """Algoritmo de ordenamiento QuickSort"""
     def quickSort(self, lista):
+        """
+        :param lista: lista introducida
+        :return: lista ordenada
+        """
         if (len(lista) <= 1):
             return lista
 
@@ -56,8 +76,12 @@ class AgoritmoDeOrdenamiento:
         lista = self.quickSort(lt) + eq + self.quickSort(gt)
         return lista
 
-    # Algoritmo de ordenamiento MergeSort
+    """Algoritmo de ordenamiento MergeSort"""
     def mergeSort(self, lista):
+        """
+        :param lista: lista introducida
+        :return: lista ordenada
+        """
         if len(lista) > 1:
             medio = len(lista) // 2
             izquierda = lista[:medio]
